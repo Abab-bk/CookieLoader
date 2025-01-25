@@ -4,10 +4,25 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Version>0.1.0</Version>
+        <Title>CookieLoader</Title>
+        <Authors>Flower</Authors>
+        <Description>The Godot's missing resource loader.</Description>
+        <Copyright>Flower</Copyright>
+        <PackageProjectUrl>https://github.com/Abab-bk/CookieLoader</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/Abab-bk/CookieLoader</RepositoryUrl>
+        <PackageTags>Game,Godot,GameDev,Loader,Resource,ResourceLoader</PackageTags>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="GodotSharp" Version="4.3.0" />
     </ItemGroup>
 
+    <ItemGroup>
+        <None Include="LICENSE.txt" Pack="true" PackagePath=""/>
+        <None Include="README.md" Pack="true" PackagePath="" />
+    </ItemGroup>
+    
 </Project>
