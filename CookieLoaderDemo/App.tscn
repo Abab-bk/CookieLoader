@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfv1iqyg7tg8s"]
+
+[ext_resource type="Script" path="res://App.cs" id="1_gdsjk"]
+
+[node name="App" type="Node2D" node_paths=PackedStringArray("_multiAssetLoaderProgressBar")]
+script = ExtResource("1_gdsjk")
+_multiAssetLoaderProgressBar = NodePath("ProgressBar")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_right = 595.0
+offset_bottom = 39.0
