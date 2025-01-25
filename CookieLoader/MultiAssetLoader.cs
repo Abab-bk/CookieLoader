@@ -21,6 +21,12 @@ public class MultiAssetLoader : BaseAssetLoader
             _loadItems[i] = new LoadItem(pathArray[i]);
     }
 
+    public MultiAssetLoader(IEnumerable<LoadItem> items, float minLoadDuration = 0f)
+        : base(minLoadDuration)
+    {
+        _loadItems = items.ToArray();
+    }
+
     public LoadItem GetLoadItem(int index) => _loadItems[index];
     public LoadItem? GetLoadItem(string path) => 
         _loadItems.FirstOrDefault(item => item.Path == path);
@@ -44,7 +50,7 @@ public class MultiAssetLoader : BaseAssetLoader
         currentProgress = status switch
         {
             ResourceLoader.ThreadLoadStatus.InProgress when _progress.Count > 0 
-                => (int)_progress[0],
+                => (float)_progress[0],
             ResourceLoader.ThreadLoadStatus.Loaded => 1f,
             _ => currentProgress
         };

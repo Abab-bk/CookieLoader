@@ -2,10 +2,16 @@
 
 [ext_resource type="Script" path="res://App.cs" id="1_gdsjk"]
 
-[node name="App" type="Node2D" node_paths=PackedStringArray("_multiAssetLoaderProgressBar")]
+[node name="App" type="Node2D" node_paths=PackedStringArray("_multiAssetLoaderProgressBar", "_assetLoaderProgressBar")]
 script = ExtResource("1_gdsjk")
 _multiAssetLoaderProgressBar = NodePath("ProgressBar")
+_assetLoaderProgressBar = NodePath("ProgressBar2")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 offset_right = 595.0
 offset_bottom = 39.0
+
+[node name="ProgressBar2" type="ProgressBar" parent="."]
+offset_top = 132.0
+offset_right = 595.0
+offset_bottom = 171.0

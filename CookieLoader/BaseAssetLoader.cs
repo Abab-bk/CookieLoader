@@ -31,5 +31,10 @@ public abstract class BaseAssetLoader(float minLoadDuration)
         
         CompleteEventFired = true;
         OnLoadComplete();
+        SendEvent();
+    }
+
+    protected virtual void SendEvent()
+    {
     }
 }
